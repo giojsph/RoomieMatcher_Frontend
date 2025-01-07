@@ -22,7 +22,7 @@ const select = () => {
   }, [])
   const updateUserGender = async () => {
     try {
-      const response = await axios.put(`https://roomiematcherbackend-production.up.railway.app/users/${userId}/gender`, {
+      const response = await axios.put(`https://roomiematcher-backend.onrender.com/users/${userId}/gender`, {
         gender: option
       });
 

@@ -29,7 +29,7 @@ const index = () => {
   const fetchReceivedLikesDetails = async () => {
     try{
       const response = await axios.get(
-        `https://roomiematcherbackend-production.up.railway.app/received-likes/${userId}/details`
+        `https://roomiematcher-backend.onrender.com/received-likes/${userId}/details`
       );
       console.log(response);
       const ReceivedLikesDetails = response.data.ReceivedLikesDetails;
@@ -41,7 +41,7 @@ const index = () => {
 
   const fetchUserMatches = async () => {
     try{
-      const response = await axios.get(`https://roomiematcherbackend-production.up.railway.app/users/${userId}/matches`);
+      const response = await axios.get(`https://roomiematcher-backend.onrender.com/users/${userId}/matches`);
       const userMatches = response.data.matches;
       setMatches(userMatches);
     } catch(error){

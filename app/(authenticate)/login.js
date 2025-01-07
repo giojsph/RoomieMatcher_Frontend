@@ -29,7 +29,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const user = { email, password };
-      const response = await axios.post("https://roomiematcherbackend-production.up.railway.app/login", user);
+      const response = await axios.post("https://roomiematcher-backend.onrender.com/login", user);
 
       if (response.data?.token) {
         await AsyncStorage.setItem("auth", response.data.token);

@@ -22,7 +22,7 @@ const index = () => {
   }, [])
   const fetchUserDescription = async () => {
     try {
-      const response = await axios.get(`https://roomiematcher-production.up.railway.app/users/${userId}`);
+      const response = await axios.get(`https://roomiematcher-backend.onrender.com/users/${userId}`);
       console.log(response);
       const user = response.data;
 
@@ -34,7 +34,7 @@ const index = () => {
 
   const fetchProfiles = async () => {
     try {
-      const response = await axios.get("https://roomiematcher-production.up.railway.app/profiles", {
+      const response = await axios.get("https://roomiematcher-backend.onrender.com/profiles", {
         params: {
           userId: userId,
           gender: user?.gender,

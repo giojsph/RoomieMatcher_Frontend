@@ -150,7 +150,7 @@ const index = () => {
   }, []);
   const fetchUserDescription = async () => {
     try {
-      const response = await axios.get(`https://roomiematcherbackend-production.up.railway.app/users/${userId}`);
+      const response = await axios.get(`https://roomiematcher-backend.onrender.com/users/${userId}`);
       console.log(response);
       const user = response.data;
 
@@ -170,7 +170,7 @@ const index = () => {
   }, [userId])
   const updateUserDescription = async () => {
     try {
-      const response = await axios.put(`https://roomiematcherbackend-production.up.railway.app/users/${userId}/description`, {
+      const response = await axios.put(`https://roomiematcher-backend.onrender.com/users/${userId}/description`, {
         description: description,
       });
 
@@ -202,7 +202,7 @@ const index = () => {
 
   const addLookingFor = async (lookingFor) => {
     try {
-      const response = await axios.put(`https://roomiematcherbackend-production.up.railway.app/users/${userId}/looking-for`, {
+      const response = await axios.put(`https://roomiematcher-backend.onrender.com/users/${userId}/looking-for`, {
         lookingFor: lookingFor,
       });
 
@@ -217,7 +217,7 @@ const index = () => {
   };
   const removeLookingFor = async (lookingFor) => {
     try{
-      const response = await axios.put(`https://roomiematcherbackend-production.up.railway.app/users/${userId}/looking-for/remove`, {
+      const response = await axios.put(`https://roomiematcher-backend.onrender.com/users/${userId}/looking-for/remove`, {
           lookingFor:lookingFor,
       });
 
@@ -232,7 +232,7 @@ const index = () => {
 };
   const addPreference = async (preferences) => {
     try {
-      const response = await axios.put(`https://roomiematcherbackend-production.up.railway.app/users/${userId}/preferences/add`,
+      const response = await axios.put(`https://roomiematcher-backend.onrender.com/users/${userId}/preferences/add`,
         {
           preferences: preferences
         }
@@ -249,7 +249,7 @@ const index = () => {
   };
   const removePreference = async (preferences) => {
     try {
-      const response = await axios.put(`https://roomiematcherbackend-production.up.railway.app/users/${userId}/preferences/remove`, {
+      const response = await axios.put(`https://roomiematcher-backend.onrender.com/users/${userId}/preferences/remove`, {
         preferences: preferences
       });
 
@@ -280,7 +280,7 @@ const index = () => {
 
   const handleAddImage = async () => {
     try{
-      const response = await axios.post(`https://roomiematcherbackend-production.up.railway.app/users/${userId}/profile-images`, {
+      const response = await axios.post(`https://roomiematcher-backend.onrender.com/users/${userId}/profile-images`, {
         imageUrl:imageUrl
       });
 

@@ -37,7 +37,7 @@ const register = () => {
       password: password,
     };
     axios
-    .post("https://roomiematcherbackend-production.up.railway.app/register", user)
+    .post("https://roomiematcher-backend.onrender.com/register", user)
     .then((response) => {
       console.log(response);
       Alert.alert(

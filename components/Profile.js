@@ -12,7 +12,7 @@ const profile = ({ item, isEven, userId, setProfiles }) => {
   const handleLike = async (selectedUserId) => {
     try {
       setLiked(true);
-      await axios.post("https://roomiematcherbackend-production.up.railway.app/send-like", {
+      await axios.post("https://roomiematcher-backend.onrender.com/send-like", {
         currentUserId: userId,
         selectedUserId: selectedUserId
       });
@@ -30,7 +30,7 @@ const profile = ({ item, isEven, userId, setProfiles }) => {
   const handleLikeOther = async (selectedUserId) => {
     try {
       setSelected(true);
-      await axios.post("https://roomiematcherbackend-production.up.railway.app/send-like", {
+      await axios.post("https://roomiematcher-backend.onrender.com/send-like", {
         currentUserId: userId,
         selectedUserId: selectedUserId
       });
